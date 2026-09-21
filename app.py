@@ -1,11 +1,6 @@
 import streamlit as st
 from main import get_answer
 
-# ============================================================
-# RNTU Insight AI — Streamlit UI
-# All retrieval + LLM logic lives in src/rag_chain.py; this file
-# only handles layout, the About sidebar, and the chat widgets.
-# ============================================================
 
 st.set_page_config(
     page_title="RNTU Insight AI",
@@ -14,9 +9,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ---------------------------------------------------------------
-# Minimal custom styling
-# ---------------------------------------------------------------
 st.markdown(
     """
     <style>
@@ -43,15 +35,13 @@ st.markdown(
 # Sidebar — About the Developer
 # ---------------------------------------------------------------
 with st.sidebar:
-    st.markdown("## 👤 About the Developer")
+    st.markdown("## 👤 About")
     st.markdown("**Akash Goswami**")
     st.caption(
         "Aspiring AI/ML Engineer | Python • Machine Learning • "
         "Deep Learning • RAG & LLMs"
     )
-    st.write(
-        "Final-year B.E. student in Artificial Intelligence & Machine "
-        "Learning at Rabindranath Tagore University, Bhopal."
+    
     )
 
     st.markdown("---")
@@ -60,7 +50,7 @@ with st.sidebar:
     st.markdown("📧 akashhgoswami26@gmail.com")
 
     st.markdown("---")
-    st.caption("RNTU Insight AI — built by Akash Goswami")
+    st.caption("RNTU Insight AI — built by Akash Goswami ❤️")
 
 # ---------------------------------------------------------------
 # Main — Header
@@ -74,9 +64,7 @@ st.markdown(
 
 st.divider()
 
-# ---------------------------------------------------------------
-# Chat UI (front-end only — no backend wired up yet)
-# ---------------------------------------------------------------
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
