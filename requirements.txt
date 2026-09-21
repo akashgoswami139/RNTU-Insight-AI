@@ -1,0 +1,19 @@
+# --- UI ---
+streamlit
+ 
+# --- Core ---
+python-dotenv
+ 
+# --- LangChain (RAG pipeline: main.py, docs.py) ---
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-google-genai
+langchain-chroma
+langchain-openrouter
+chromadb
+ 
+# --- PDF loading (docs.py) ---
+pypdf
+ 
