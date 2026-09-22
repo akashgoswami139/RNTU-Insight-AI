@@ -37,24 +37,4 @@ vector_store = Chroma(
 )
 
 
-BATCH_SIZE = 20
-
-total = len(final_splite)
-
-for start in range(0, total, BATCH_SIZE):
-    end = min(start + BATCH_SIZE, total)
-
-    batch = final_splite[start:end]
-
-    print(f"Embedding chunks {start + 1} → {end} / {total}")
-
-    vector_store.add_documents(batch)
-
-    print(f" Stored {len(batch)} chunks")
-
-    # Give Gemini time before the next batch
-    if end < total:
-        print(" Waiting 10 seconds...")
-        time.sleep(10)
-
-print("\n All chunks stored successfully!")
+vector_store.add_documents(final_splite)
